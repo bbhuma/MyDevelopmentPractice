@@ -1,6 +1,24 @@
+/* Universal Selector which only applies to all the elements, they are not inherited, directly applied to all elements.  */
+* {
+  /*  border-top: 5px solid red; This will add the border on top of every html element, which does not look good but can be done.  */
+}
+
+body {
+  /* Inheritance and Overridden */
+  /* color: red;  Lowest priority, when it is not overridden,inherited selectors gets easily gets overrided */
+  /* All TEXT properties get inherited to all the elements of body, they are not directly applied, they are inherited. 
+But other properties that are only good to body, are not applied to all the elements. 
+*/
+  font-family: sans-serif;
+  color: #444;
+
+  border-top: 10px solid #1098ad; /*This only to top of the body */
+}
+
 /* We always use CSS Classes and rarely use id's */
 /* CSS Rules: selector + declaration block(one or more declarations; key:value pairs) */
 /* List selector */
+/*No need of this as we have the same properties inherited from Body Selector.  
 h1,
 h2,
 h3,
@@ -9,7 +27,7 @@ p,
 li {
   font-family: sans-serif;
   color: #444;
-}
+} */
 h1,
 h2,
 h3 {
@@ -183,4 +201,18 @@ footer p {
   /* Only use this when you are messed up and not able to figure out the conflicts 
   Write selectors simple, dont write nesting,too may classes and id's. if not able figure out use !important*/
   color: green !important;
+}
+
+/* We can apply CSS on two childs of nav */
+/* nav a:link {
+  font-size: 18px;
+}
+nav a:link,
+nav p {
+  font-size: 25px;
+} */
+
+nav {
+  /* now style of nav are getting inherited from  nav selector. */
+  font: size 18px;
 }
