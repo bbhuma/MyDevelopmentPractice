@@ -35,9 +35,6 @@ h4 {
   text-transform: uppercase;
   text-align: center;
 }
-li {
-  /* font-family: sans-serif; */
-}
 
 /* Descendant selector, has a different rule to p elements inside of footer.P is child of footer */
 /* footer p {
