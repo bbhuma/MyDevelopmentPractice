@@ -1,0 +1,76 @@
+/* We always use CSS Classes and rarely use id's */
+/* CSS Rules: selector + declaration block(one or more declarations; key:value pairs) */
+/* List selector */
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+}
+
+h1 {
+  /* font-size: 26px; this is a repetitive declaration across mutliple selectors*/
+  /* font-family: sans-serif; */
+  font-style: italic;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 40px;
+  /* font-family: sans-serif; */
+}
+h3 {
+  font-size: 30px;
+  /* font-family: sans-serif; */
+}
+p {
+  font-size: 22px;
+  /* font-family: sans-serif; */
+  line-height: 1.5;
+}
+h4 {
+  font-size: 20px;
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  text-align: center;
+}
+li {
+  /* font-family: sans-serif; */
+}
+
+/* Descendant selector, has a different rule to p elements inside of footer.P is child of footer */
+/* footer p {
+  font-size: 16px;
+} */
+
+/* ID - Can not be repeated again, but classes can be reused multiple times */
+/* * CSS Classes- can gice additional styling to the html elements, to keep them unique  */
+*/ #copyright {
+  font-size: 16px;
+}
+/* Descendant of descendant selector-  This is encodes the html strucutre into scc, not good idea, so use ID,CLASS of CSS. */
+/* article header p {
+  font-style: italic;
+} */
+
+#author {
+  font-size: itlaic;
+  font-size: 18px;
+}
+
+/* CSS Classes- can gice additional styling to the html elements, to keep them unique  */
+/* Slecting the paragraph multiple times -  */
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* ul {
+  list-style: none;
+} */
+
+By using class,
+/* we can only remove the unnecessary buller points.  */
+.related {
+  list-style: none;
+}
