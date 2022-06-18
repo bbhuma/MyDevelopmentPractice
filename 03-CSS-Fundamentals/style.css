@@ -64,7 +64,7 @@ h4 {
 }
 
 /* CSS Classes- can gice additional styling to the html elements, to keep them unique  */
-/* Slecting the paragraph multiple times -  */
+/* Selecting the paragraph multiple times -  */
 .related-author {
   font-size: 18px;
   font-weight: bold;
@@ -135,11 +135,13 @@ article p:last-child {
 /*We should not target the anchor directly, instead use suedo classes to target actual links. */
 /* First CSS targets all anchors, even if the y are not links, we will override it with another css which is only for links, by suedo classes */
 
-/* Styling hyperlinks LVHA - Link Visited Hover Active- Psuedo Classes */
+/* Styling hyperlinks LVHA - Link Visited Hover Active- Psuedo Classes
+Link, Visted, Hover, Active - They all have more specificity than the normal anchir tag.  
+*/
 a {
   color: red;
 }
-a:link {
+a:any-link {
   color: #1098ad;
   text-decoration: none; /*remove hyperlinks*/
 }
@@ -159,5 +161,26 @@ a:active {
   color: blue;
   text-decoration: underline blue;
   font-style: italic;
+  background: red;
   text-decoration: underline; /*remove hyperlinks*/
+}
+
+/* Conflicting selectors- 
+Check order specificity , by hovering the selector
+Id and Classes will get most precedence than element selectors
+Order of precedence is !important > InlineCSS > ID > Class(Bottom Most) > Element selector > Universal Selector     */
+#copyright {
+  color: red;
+}
+.copyright {
+  color: blueviolet;
+}
+.text {
+  color: orange;
+}
+
+footer p {
+  /* Only use this when you are messed up and not able to figure out the conflicts 
+  Write selectors simple, dont write nesting,too may classes and id's. if not able figure out use !important*/
+  color: green !important;
 }
