@@ -59,7 +59,7 @@ h4 {
 } */
 
 #author {
-  font-size: itlaic;
+  font-style: italic;
   font-size: 18px;
 }
 
@@ -94,4 +94,37 @@ aside {
 /* Entire page can be given some back-ground color by using body element
 body {
   background-color: #dde01c27;
+  background-color: orangered;
 } */
+
+/* Suedo Classes: These work best for Ordered list or Un-ordered list, */
+/* .first-li {
+  font-weight: bold;
+} */
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-weight: italic;
+}
+li:nth-child(odd) {
+  font-weight: bold;
+}
+li:nth-child(even) {
+  font-style: italic;
+}
+li:nth-child(2) {
+  color: blue;
+}
+
+/* //But Sudo classes dont work for non similar elements like artcile, wors for mutliple similar li elements.  */
+
+/* This works only if the first child of article is p, since first emenet here is header, this syntax does not work. 
+article p:last-child{
+  color:red;
+} */
+article p:last-child {
+  color: red;
+}
