@@ -134,10 +134,30 @@ article p:last-child {
 
 /*We should not target the anchor directly, instead use suedo classes to target actual links. */
 /* First CSS targets all anchors, even if the y are not links, we will override it with another css which is only for links, by suedo classes */
+
+/* Styling hyperlinks LVHA - Link Visited Hover Active- Psuedo Classes */
 a {
   color: red;
 }
-a:any-link {
+a:link {
   color: #1098ad;
   text-decoration: none; /*remove hyperlinks*/
+}
+a:visited {
+  color: #777; /* Usually people use same color for visited links.*/
+  color: #1098ad;
+}
+
+a:hover {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: underline red; /*remove hyperlinks*/
+}
+/* when you click link, that when it is active */
+a:active {
+  color: blue;
+  text-decoration: underline blue;
+  font-style: italic;
+  text-decoration: underline; /*remove hyperlinks*/
 }
