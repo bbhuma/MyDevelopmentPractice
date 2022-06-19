@@ -14,6 +14,7 @@ body {
   /* All TEXT properties get inherited to all the elements of body, they are not directly applied, they are inherited. 
 But other properties that are only good to body, are not applied to all the elements. 
 */
+  /* background-color: rgba(116, 99, 54, 0.521); */
   font-family: sans-serif;
   color: #444;
   border-top: 5px solid #1098ad; /*This only to top of the body */
@@ -23,6 +24,22 @@ nav {
   /* now style of nav are getting inherited from  nav selector. */
   font: size 18px;
 }
+/* Adding margins to links */
+nav a:link {
+  background-color: orange;
+  padding: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* Now we can set height, width of images etc and add  padding and margin on inline elements with line below */
+  display: inline-block; /*With out this, we can not add margins on top, only horizontal margins can be added for inline elements.  */
+}
+/* REMOVING MARGINS TO LAST ELEMENTS */
+nav a:link:last-child {
+  margin-right: 0;
+}
+
 article {
   margin-bottom: 40px;
 }
@@ -33,7 +50,10 @@ article {
 }
 
 .container {
-  width: 700px;
+  width: 1000px; /* Giving the container a width is first step */
+  margin-left: auto;
+  margin-right: auto; /*Then give a margin on left an dright so that the content  is centered */
+  margin: 0 auto;
 }
 
 .main-header {
@@ -43,8 +63,10 @@ article {
   padding-left: 40px; */
   padding: 20px 40px; /*first indicates left and second indidcates right padding  */
   margin-bottom: 60px;
-  height: 160px;
-  border: 5px solid #1098ad;
+  /* height: 160px; */
+  height: auto;
+  /* border: 5px solid #1098ad; This gives border on all sides
+  border-top: 5px solid #1098ad; */
 }
 
 .post-header {
@@ -59,6 +81,8 @@ aside {
   margin-top: 20px;
   width: 500px;
 }
+
+/*SMALLER ELEMENTS  */
 
 /* We always use CSS Classes and rarely use id's */
 /* CSS Rules: selector + declaration block(one or more declarations; key:value pairs) */
@@ -101,6 +125,7 @@ p {
   margin-bottom: 15px;
   /* font-family: sans-serif; */
   line-height: 1.5;
+  /* display: inline; */
 }
 
 /* Show the numbers and bullets */
@@ -120,6 +145,7 @@ h4 {
 li {
   font-size: 20px;
   margin-bottom: 10px;
+  /* display: inline; */
 }
 li:last-child {
   margin-bottom: 0;
@@ -258,8 +284,11 @@ footer p {
 
 .post-image {
   /* width: 800px; */
+  /* Height, width, margin and padding can be used for images now, Images are inline elements but they do bahave like inline Block elements */
   width: 100%; /* 100% of the original width of the screen of the parent contianer, parent here is html header  */
   height: auto; /*auto is used Only when you already mentioned the dimesnions in html  */
+  margin: 5px;
+  /* display:inline-block; No need to write this because they do behave like inline block elements by defalult */
 }
 
 /* We can apply CSS on two childs of nav */

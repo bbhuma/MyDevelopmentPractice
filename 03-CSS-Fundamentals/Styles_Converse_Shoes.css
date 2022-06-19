@@ -1,3 +1,7 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 body {
   font-family: sans-serif;
   line-height: 1.4;
@@ -5,9 +9,16 @@ body {
   color: black;
   border: 5px solid black; /* Always forgetting the 5px solid Color */
 }
+/* CONTAINER - to center the page  */
+/* .container {
+  width: 825px;
+  margin: 0 auto;
+} */
 /* PRODUCT */
-product {
+.product {
   border: 5px solid black;
+  width: 825px;
+  margin: 50px auto; /* Add 50px on top and bottom, because they were glued up before with 0 px;  */
 }
 
 /* PRODUCT TITLE, can also use h2 selector, but use a seperate class for no conflicts */
@@ -16,6 +27,8 @@ product {
   text-transform: uppercase;
   font-size: 22px;
   background-color: #dfdfdf;
+  padding: 15px 0px;
+  /* margin:15px:, this creates space outside the backgraound and not helpful */
 }
 /* Product information p a{} can be used, not prefered*/
 .price {
@@ -27,6 +40,11 @@ product {
   font-size: 16px;
   font-weight: bold;
   color: #777;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  margin-bottom: 10px;
 }
 
 /* More information links */
@@ -48,22 +66,36 @@ product {
   font-size: 24px;
   text-transform: uppercase;
   text-align: left;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
-.details-title {
+.details-list {
   /* Either you can do this in list or have a class created on the <ul> tag */
+  margin-left: 20px; /* when we reset margin the numbers and bullet points ar elost, we need to add margin-left for that purpose*/
+  margin-bottom: 20px;
   list-style: square;
+}
+/* Descendant selector with one is a class and other is an element */
+.details-list li {
+  margin-bottom: 15px;
+}
+.details-list li:last-child {
+  margin-bottom: 0;
 }
 
 /* Button */
 .add-cart {
   font-size: 20px;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   background-color: black;
   cursor: pointer;
+  padding: 15px; /* Add padding to the button */
+  width: 100%;
+  border-top: 5px solid black;
 }
 .add-cart:hover {
-  color: black;
-  background-color: white;
-  border: none;
+  color: #000;
+  background-color: #fff;
+  /* border: none; */
 }
