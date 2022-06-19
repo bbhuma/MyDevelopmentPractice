@@ -1,0 +1,219 @@
+/* Universal Selector which only applies to all the elements, they are not inherited, directly applied to all elements.  */
+* {
+  /*  border-top: 5px solid red; This will add the border on top of every html element, which does not look good but can be done.  */
+}
+
+body {
+  /* Inheritance and Overridden */
+  /* color: red;  Lowest priority, when it is not overridden,inherited selectors gets easily gets overrided */
+  /* All TEXT properties get inherited to all the elements of body, they are not directly applied, they are inherited. 
+But other properties that are only good to body, are not applied to all the elements. 
+*/
+  font-family: sans-serif;
+  color: #444;
+
+  border-top: 5px solid #1098ad; /*This only to top of the body */
+}
+
+/* We always use CSS Classes and rarely use id's */
+/* CSS Rules: selector + declaration block(one or more declarations; key:value pairs) */
+/* List selector */
+/*No need of this as we have the same properties inherited from Body Selector.  
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #444;
+} */
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  /* font-size: 26px; this is a repetitive declaration across mutliple selectors*/
+  /* font-family: sans-serif; */
+  font-style: italic;
+  text-transform: uppercase;
+  color: #1098ad;
+}
+h2 {
+  font-size: 40px;
+  /* font-family: sans-serif; */
+}
+h3 {
+  font-size: 30px;
+  /* font-family: sans-serif; */
+}
+p {
+  font-size: 22px;
+  /* font-family: sans-serif; */
+  line-height: 1.5;
+}
+h4 {
+  font-size: 20px;
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Descendant selector, has a different rule to p elements inside of footer.P is child of footer */
+/* footer p {
+  font-size: 16px;
+} */
+
+/* ID - Can not be repeated again, but classes can be reused multiple times */
+/* * CSS Classes- can give additional styling to the html elements, to keep them unique  */
+#copyright {
+  font-size: 16px;
+}
+/* Descendant of descendant selector-  This is encodes the html strucutre into scc, not good idea, so use ID,CLASS of CSS. */
+/* article header p {
+  font-style: italic;
+} */
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+/* CSS Classes- can gice additional styling to the html elements, to keep them unique  */
+/* Selecting the paragraph multiple times -  */
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* ul {
+  list-style: none;
+} */
+
+By using class,
+/* we can only remove the unnecessary buller points.  */
+.related {
+  /* list-style: square; */
+  list-style: none;
+}
+
+.main-header {
+  background-color: #e4e1e1;
+  border-top: 5px solid #1098ad;
+}
+
+/* //Element selector, when we use the element to select; */
+aside {
+  background-color: #e4e1e1;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
+
+/* Entire page can be given some back-ground color by using body element
+body {
+  background-color: #dde01c27;
+  background-color: orangered;
+} */
+
+/* Suedo Classes: These work best for Ordered list or Un-ordered list, */
+/* .first-li {
+  font-weight: bold;
+} */
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-weight: italic;
+}
+li:nth-child(odd) {
+  font-weight: bold;
+}
+li:nth-child(even) {
+  font-style: italic;
+}
+li:nth-child(2) {
+  color: violet;
+}
+
+/* //But Sudo classes dont work for non similar elements like artcile, wors for mutliple similar li elements.  */
+
+/* Misconception: This works only if the first child of article is p, since first emenet here is header, this syntax does not work.*/
+article p:first-child {
+  color: red;
+}
+
+article p:last-child {
+  color: red;
+}
+
+/* Styling the links and hypelinks */
+
+/*We should not target the anchor directly, instead use suedo classes to target actual links. */
+/* First CSS targets all anchors, even if the y are not links, we will override it with another css which is only for links, by suedo classes */
+
+/* Styling hyperlinks LVHA - Link Visited Hover Active- Psuedo Classes
+Link, Visted, Hover, Active - They all have more specificity than the normal anchir tag.  
+*/
+a {
+  color: red;
+}
+a:any-link {
+  color: #1098ad;
+  text-decoration: none; /*remove hyperlinks*/
+}
+a:visited {
+  color: #777; /* Usually people use same color for visited links.*/
+  color: #1098ad;
+}
+
+a:hover {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: underline red; /*remove hyperlinks*/
+}
+/* when you click link, that when it is active */
+a:active {
+  color: blue;
+  text-decoration: underline blue;
+  font-style: italic;
+  background: red;
+  text-decoration: underline; /*remove hyperlinks*/
+}
+
+/* Conflicting selectors- 
+Check order specificity , by hovering the selector
+Id and Classes will get most precedence than element selectors
+Order of precedence is !important > InlineCSS > ID > Class(Bottom Most) > Element selector > Universal Selector     */
+#copyright {
+  color: red;
+}
+.copyright {
+  color: blueviolet;
+}
+.text {
+  color: orange;
+}
+
+footer p {
+  /* Only use this when you are messed up and not able to figure out the conflicts 
+  Write selectors simple, dont write nesting,too may classes and id's. if not able figure out use !important*/
+  color: green !important;
+}
+
+/* We can apply CSS on two childs of nav */
+/* nav a:link {
+  font-size: 18px;
+}
+nav a:link,
+nav p {
+  font-size: 25px;
+} */
+
+nav {
+  /* now style of nav are getting inherited from  nav selector. */
+  font: size 18px;
+}

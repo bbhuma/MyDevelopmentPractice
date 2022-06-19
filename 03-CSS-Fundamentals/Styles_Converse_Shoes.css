@@ -1,0 +1,69 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+  font-size: 18px;
+  color: black;
+  border: 5px solid black; /* Always forgetting the 5px solid Color */
+}
+/* PRODUCT */
+product {
+  border: 5px solid black;
+}
+
+/* PRODUCT TITLE, can also use h2 selector, but use a seperate class for no conflicts */
+.product-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  background-color: #dfdfdf;
+}
+/* Product information p a{} can be used, not prefered*/
+.price {
+  font-size: 24px;
+}
+
+/* Product information - p {} can be used, not prefered*/
+.shipping {
+  font-size: 16px;
+  font-weight: bold;
+  color: #777;
+}
+
+/* More information links */
+.more-info:link,
+.more-info:visited {
+  font-size: 22px;
+  color: black;
+}
+
+/* Do hover and active in LVHA order only, copy them and do as a single selector */
+.more-info:hover,
+.more-info:active {
+  color: red;
+  text-decoration: none;
+}
+
+/* Product Details- Can be used a h3 tag, but use seperate class.  */
+.details-title {
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: left;
+}
+.details-title {
+  /* Either you can do this in list or have a class created on the <ul> tag */
+  list-style: square;
+}
+
+/* Button */
+.add-cart {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+.add-cart:hover {
+  color: black;
+  background-color: white;
+  border: none;
+}
