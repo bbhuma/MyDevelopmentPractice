@@ -39,10 +39,12 @@ article {
   padding-left: 40px; */
   padding: 20px 40px; /*first indicates left and second indidcates right padding  */
   margin-bottom: 60px;
+  height: 160px;
+  border: 5px solid #1098ad;
 }
 
 .post-header {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 aside {
@@ -51,6 +53,7 @@ aside {
   border-bottom: 5px solid #1098ad;
   border: 50px 0;
   margin-top: 20px;
+  width: 500px;
 }
 
 /* We always use CSS Classes and rarely use id's */
@@ -247,6 +250,12 @@ footer p {
   /* Only use this when you are messed up and not able to figure out the conflicts 
   Write selectors simple, dont write nesting,too may classes and id's. if not able figure out use !important*/
   color: green !important;
+}
+
+.post-image {
+  /* width: 800px; */
+  width: 100%; /* 100% of the original width of the screen of the parent contianer, parent here is html header  */
+  height: auto; /*auto is used Only when you already mentioned the dimesnions in html  */
 }
 
 /* We can apply CSS on two childs of nav */
