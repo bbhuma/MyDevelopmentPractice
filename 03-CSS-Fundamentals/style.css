@@ -12,7 +12,7 @@ But other properties that are only good to body, are not applied to all the elem
   font-family: sans-serif;
   color: #444;
 
-  border-top: 10px solid #1098ad; /*This only to top of the body */
+  border-top: 5px solid #1098ad; /*This only to top of the body */
 }
 
 /* We always use CSS Classes and rarely use id's */
@@ -94,6 +94,7 @@ h4 {
 By using class,
 /* we can only remove the unnecessary buller points.  */
 .related {
+  /* list-style: square; */
   list-style: none;
 }
 
