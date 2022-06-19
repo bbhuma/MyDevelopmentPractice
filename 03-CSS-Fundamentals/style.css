@@ -32,6 +32,10 @@ article {
   list-style: none;
 }
 
+.container {
+  width: 700px;
+}
+
 .main-header {
   background-color: #e4e1e1;
   /* padding: 20px; This inlcudes padding on all 4 sides
