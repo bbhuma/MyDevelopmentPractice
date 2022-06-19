@@ -19,6 +19,9 @@ But other properties that are only good to body, are not applied to all the elem
   color: #444;
   border-top: 5px solid #1098ad; /*This only to top of the body */
   /* margin: 0; This margin reset does not work, it has to be in the universal selector */
+
+  /* Give absolute position of your button, in respect to complete body element.  */
+  position: relative;
 }
 nav {
   /* now style of nav are getting inherited from  nav selector. */
@@ -54,6 +57,7 @@ article {
   margin-left: auto;
   margin-right: auto; /*Then give a margin on left an dright so that the content  is centered */
   margin: 0 auto;
+  position: relative; /* Adding it in container in the header section makes more sense, since page is centured now.
 }
 
 .main-header {
@@ -71,6 +75,7 @@ article {
 
 .post-header {
   margin-bottom: 60px;
+  position: relative;
 }
 
 aside {
@@ -289,6 +294,25 @@ footer p {
   height: auto; /*auto is used Only when you already mentioned the dimesnions in html  */
   margin: 5px;
   /* display:inline-block; No need to write this because they do behave like inline block elements by defalult */
+}
+button {
+  /* button is a block level element */
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  /* Sets on the extreme left top corner. 
+  top: 0px;
+  left: 0px; */
+
+  /* Sets button at bottom of the view port, meaning the visible part of the page, thats not what we want though
+  bottom: 0px;
+  left: 50px; */
+
+  /* We want to absolutledy position the element relative to some parent: */
+  bottom: 50px;
+  right: 50px;
+  /* Declare position: relative; in body element or wherever you want ths button. */
 }
 
 /* We can apply CSS on two childs of nav */
