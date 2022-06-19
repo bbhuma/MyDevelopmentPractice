@@ -14,6 +14,7 @@ body {
   /* All TEXT properties get inherited to all the elements of body, they are not directly applied, they are inherited. 
 But other properties that are only good to body, are not applied to all the elements. 
 */
+  /* background-color: rgba(116, 99, 54, 0.521); */
   font-family: sans-serif;
   color: #444;
   border-top: 5px solid #1098ad; /*This only to top of the body */
@@ -33,7 +34,10 @@ article {
 }
 
 .container {
-  width: 700px;
+  width: 1000px; /* Giving the container a width is first step */
+  margin-left: auto;
+  margin-right: auto; /*Then give a margin on left an dright so that the content  is centered */
+  margin: 0 auto;
 }
 
 .main-header {
@@ -44,7 +48,8 @@ article {
   padding: 20px 40px; /*first indicates left and second indidcates right padding  */
   margin-bottom: 60px;
   height: 160px;
-  border: 5px solid #1098ad;
+  /* border: 5px solid #1098ad; This gives border on all sides
+  border-top: 5px solid #1098ad; */
 }
 
 .post-header {
