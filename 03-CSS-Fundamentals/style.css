@@ -39,6 +39,9 @@ nav a:link {
   /* Now we can set height, width of images etc and add  padding and margin on inline elements with line below */
   display: inline-block; /*With out this, we can not add margins on top, only horizontal margins can be added for inline elements.  */
 }
+.main-header nav a:link {
+  margin-top: 15px; /* Alaways the complex CSS with higher specificity gets picked up*/
+}
 /* REMOVING MARGINS TO LAST ELEMENTS */
 nav a:link:last-child {
   margin-right: 0;
