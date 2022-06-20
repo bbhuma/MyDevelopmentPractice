@@ -396,3 +396,16 @@ h1 {
 nav {
   float: right;
 }
+
+.clear {
+  clear: left; /* To clear the float of the left */
+  clear: right; /* To clear the float of the right */
+  clear: both;
+}
+
+.clearfix::after {
+  /* After psudo will add a element in the end of  */
+  clear: both;
+  content: ""; /*Psudo elements only appear when there is a content field even if there is no value for it.*/
+  display: block; /* Psuedo element are inline, so they need to be declared as a block.  */
+}
