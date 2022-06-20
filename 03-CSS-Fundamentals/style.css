@@ -26,6 +26,7 @@ But other properties that are only good to body, are not applied to all the elem
 nav {
   /* now style of nav are getting inherited from  nav selector. */
   font: size 18px;
+  text-align: center;
 }
 /* Adding margins to links */
 nav a:link {
@@ -152,6 +153,7 @@ h4 {
 li {
   font-size: 20px;
   margin-bottom: 10px;
+  cursor: pointer;
   /* display: inline; */
 }
 li:last-child {
