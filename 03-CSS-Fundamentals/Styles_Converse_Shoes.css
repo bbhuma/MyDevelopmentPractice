@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: sans-serif;
@@ -154,4 +155,32 @@ body {
 }
 #square6 {
   background: violet;
+}
+
+/* FLOATS */
+.front-section {
+  width: 250px; /*Using margin for gap is not a better way to do it. instead do it as less px */
+  float: left;
+}
+.mid-section {
+  width: 300px; /*Using margin for gap is not a better way to do it. instead do it as less px */
+  float: left;
+  padding-left: 20px;
+}
+.end-section {
+  width: 250px; /*Using margin for gap is not a better way to do it. instead do it as less px */
+  float: right;
+  padding-right: 10px;
+}
+.price-float {
+  width: 130px; /*Using margin for gap is not a better way to do it. instead do it as less px */
+  float: left;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+.shipping-float {
+  width: 150px; /*Using margin for gap is not a better way to do it. instead do it as less px */
+  float: left;
+  padding-right: 10px;
+  margin-bottom: 20px;
 }
