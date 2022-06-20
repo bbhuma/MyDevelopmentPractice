@@ -42,13 +42,24 @@
 
         /* FLEXBOX */
         display: flex; /* As you mention display:flex; All the container elements are side by side, without using any floats.  */
-        align-items: center; /* Alignment is based on the highest element. */
-        align-items: flex-start; /* Put all others at start of the Tallest, on top */
-        align-items: flex-end; /*Put all others at start of the Tallest, on bottom*/
+
+        /* Flex Container Properties */
+        align-items: center; /* Aligns items horizontallsy along cross axis, Alignment is based on the highest element. */
+        align-items: flex-start; /* Put all others at start top of the Tallest, on top */
+        align-items: flex-end; /*Put all others at end bottom  of the Tallest, on bottom*/
         align-items: stretch; /* all elements stretch as tall as the tallest elements*/
         align-items: center; /* all elements stretch as tall as the tallest elements*/
-        justify-content:center; /*Open up a lot of different opportunites */
-        justify-content: space-between;
+        align-items: baseline;
+
+        justify-content: center; /*Aligns items horizontallsy along main axis, Open up a lot of different opportunites */
+        justify-content: flex-start; /* Moves the items to  left end  */
+        justify-content: flex-end; /* Moves the items to  right end  */
+        justify-content: space-between; /* Moves the items to  right end  */
+        justify-content: space-around; /* Moves the items to  right end  */
+        justify-content: space-evenly; /* Moves the items to  right end  */
+      }
+
+      /* Flex Items Properties */
     </style>
   </head>
   <body>
