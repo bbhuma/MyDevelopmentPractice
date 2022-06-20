@@ -31,7 +31,7 @@ nav {
 /* Adding margins to links */
 nav a:link {
   background-color: #eee;
-  padding: 20px;
+  padding: 10px;
   margin-right: 20px;
   margin-left: 20px;
   margin-top: 10px;
@@ -58,7 +58,7 @@ article {
   margin-left: auto;
   margin-right: auto; /*Then give a margin on left an dright so that the content  is centered */
   margin: 0 auto;
-  position: relative; /* Adding it in container in the header section makes more sense, since page is centured now.
+  position: relative; /* Adding it in container in the header section makes more sense, since page is centured now. */
 }
 
 .main-header {
