@@ -57,7 +57,7 @@ article {
 }
 
 .container {
-  width: 1000px; /* Giving the container a width is first step */
+  width: 1200px; /* Giving the container a width is first step */
   margin-left: auto;
   margin-right: auto; /*Then give a margin on left an dright so that the content  is centered */
   margin: 0 auto;
@@ -408,4 +408,20 @@ nav {
   clear: both;
   content: ""; /*Psudo elements only appear when there is a content field even if there is no value for it.*/
   display: block; /* Psuedo element are inline, so they need to be declared as a block.  */
+}
+
+article {
+  background-color: rgba(0, 128, 128, 0.253);
+  width: 825px; /*Using margin for gap is not a better way to do it. instead do it as less px */
+  float: left;
+}
+aside {
+  background-color: orange;
+  width: 300px;
+  float: right;
+  /* float:left; This is not ideal, this will leave the gap on right */
+}
+footer {
+  background-color: yellow;
+  clear: both;
 }
