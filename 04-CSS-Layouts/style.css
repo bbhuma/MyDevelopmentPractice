@@ -6,7 +6,6 @@
   Wherever Backgraound colors are there, we should use padding and margin*/
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -58,7 +57,7 @@ article {
 }
 
 .container {
-  width: 1200px; /* Giving the container a width is first step */
+  width: 1000px; /* Giving the container a width is first step */
   margin-left: auto;
   margin-right: auto; /*Then give a margin on left an dright so that the content  is centered */
   margin: 0 auto;
