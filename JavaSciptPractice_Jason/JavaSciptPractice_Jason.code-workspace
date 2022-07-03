@@ -1,9 +1,11 @@
 {
   "folders": [
-	{
-		"name": "JavaSciptPractice_Jason",
-		"path": "."
-	}
-],
-  "settings": {}
+    {
+      "name": "JavaSciptPractice_Jason",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "liveServer.settings.port": 5501
+  }
 }
