@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const bill = [12, 15, 24, 14, 22, 34, 56, 55, 76, 87];
 const tip = [];
